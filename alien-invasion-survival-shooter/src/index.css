@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #000;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bannerIn {
+  from {
+    opacity: 0;
+    transform: scale(1.6);
+    letter-spacing: 0.5em;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes nudgeR { 0%, 100% { transform: translateX(-10px); } 50% { transform: translateX(10px); } }
+@keyframes nudgeL { 0%, 100% { transform: translateX(10px); } 50% { transform: translateX(-10px); } }
+@keyframes nudgeU { 0%, 100% { transform: translateY(8px); } 50% { transform: translateY(-8px); } }
+@keyframes nudgeD { 0%, 100% { transform: translateY(-8px); } 50% { transform: translateY(8px); } }
+@keyframes tapPulse { 0%, 100% { transform: scale(0.85); } 50% { transform: scale(1.12); } }
+@keyframes ejectBlink { 0%, 100% { background-color: #b91c1c; } 50% { background-color: #fde047; color: #000; } }
